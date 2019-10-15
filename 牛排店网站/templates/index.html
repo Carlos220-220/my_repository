@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- 优先使用 IE 最新版本和 Chrome -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+	</head>
+	<body>
+		<div class="clearfix nav">
+			<a class="logo" href="javascript:"></a>
+			<ul class="clearfix nav-wrap">
+                {% for titles in title_list %}
+				<li><a class="nav-item {{ titles.class }}" href="{{ titles.href }}">{{ titles.title }}</a></li>
+                {% endfor %}
+			</ul>
+		</div>
+		
+		<div id="container">
+			<div id="buttons">
+		        <span index="1" class="on"></span>
+		        <span index="2"></span>
+		        <span index="3"></span>
+		    </div>
+		    <a href="javascript:;" id="prev" class="arrow"><img src="/static/img/l.png"/></a>
+		    <a href="javascript:;" id="next" class="arrow"><img src="/static/img/r.png"/></a>
+		</div>
+		
+		<div class="new-wrap">
+			<p class="newfood-tit">新品推荐</p>
+			<div class="newfood-box clearfix" id="newfood-table">
+
+
+				<ul class="newfood-wrap clearfix newfood-show">
+                    {% for foods in food_list1 %}
+                        <li class="newfood-item {{ foods.class_l }}">
+                            <a href="/meishi-con/" class="{{ foods.class_a }}">{{ foods.food }}</a>
+                        </li>
+                    {% endfor %}
+				</ul>
+
+
+				<ul class="newfood-wrap clearfix">
+                    {% for foods in food_list2 %}
+                        <li class="newfood-item {{ foods.class_l }}">
+                            <a href="/meishi-con/" class="{{ foods.class_a }}">{{ foods.food }}</a>
+                        </li>
+                    {% endfor %}
+				</ul>
+
+
+				<ul class="newfood-wrap clearfix">
+                    {% for foods in food_list3 %}
+                        <li class="newfood-item {{ foods.class_l }}">
+                            <a href="/meishi-con/" class="{{ foods.class_a }}">{{ foods.food }}</a>
+                        </li>
+                    {% endfor %}
+				</ul>
+
+
+			</div>
+			<div class="clearfix" id="newfood-span">
+				<span style="background: url(/static/img/icon-2.png);"></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<div class="company-wrap">
+			<p class="company-tit">公司简介</p>
+			<dl class="clearfix company-dl">
+				<dt class="company-dt">
+					<img src="/static/img/pic1.png"/>
+				</dt>
+				<dd class="company-dd">
+                    {% for texts in text_list1 %}
+                        <p>{{ texts.text }}</p>
+                    {% endfor %}
+				</dd>
+			</dl>
+		</div>
+		<div class="news-wrap">
+			<p class="news-tit">新闻资讯</p>
+			<dl class="clearfix news-dl">
+				<dt class="news-dt">
+					<img src="/static/img/pic2.jpg"/>
+				</dt>
+				<dd class="news-dd">
+                    {% for texts in text_list2 %}
+                        <a href="/news-con/" class="news-link clearfix">
+                            <p class="link-tit">{{ texts.text }}</p>
+                            <p class="link-time">{{ texts.time }}</p>
+                        </a>
+                    {% endfor %}
+				</dd>
+			</dl>
+		</div>
+		<div class="foot">
+			<div class="foot-wrap">
+				<p class="foot-tit">友情链接</p>
+				<ul class="foot-link clearfix">
+					{% for links in link_list %}
+                    <li class="foot-pic">
+						<a href="javascript:;"><img src="/static/img/link{{ links.num }}.png"/></a>
+					</li>
+                    {% endfor %}
+				</ul>
+				<div class="copyright">
+                    {% for texts in text_list3 %}
+                        <p>{{ texts.text }}</p>
+                    {% endfor %}
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<!--jq调用-->
+	<script src="{% static 'js/jquery-1.11.0.js' %}" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		//导航当前项切换
+		$(".nav-item").click(function(){
+			$(this).parent("li").siblings().children().removeClass("nav-active");
+			//点击对象的父级（li）的兄弟级（li）的子集（a）移除类
+			$(this).addClass("nav-active");
+			//给点击对象添加类
+		});
+	   	  //新品推荐table切换
+	    var nSpan = document.getElementById("newfood-span");
+			var newspan = nSpan.querySelectorAll("span");
+			var oUl  = document.getElementById("newfood-table");
+			var uls = oUl.querySelectorAll("ul");
+			var last=newspan[0];
+			for(var i=0;i<newspan.length;i++){
+					newspan[i].index=i;  //给每一个按钮添加一个自定义属性，存储的是他们对应的索引值；
+					newspan[i].onclick=function(){
+						last.style.background="url(/static/img/icon.png)";  //把上一次点击对象的背景更换掉
+						uls[last.index].style.display="none"; //上一个对应的div，让他隐藏
+						this.style.background="url(/static/img/icon-2.png)"; //给当前点击的按钮添加背景
+						uls[this.index].style.display="block"; //当前点击按钮对应的div显示
+						last=this; 	//把上一次点击的对象更新成当前点击的对象
+					};
+				};
+	</script>
+</html>
