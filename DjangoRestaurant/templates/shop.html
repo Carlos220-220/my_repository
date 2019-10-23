@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+    {% block content %}
+		<ul class="breadnav clearfix">
+			<li class="bnav-item"><a href="/index/">首页</a></li>
+			<li class="bnav-item">&lt;</li>
+			<li class="bnav-item"><a href="/shop/">店面展示</a></li>
+			<li class="bnav-item">&lt;</li>
+			<li class="bnav-item"><a href="javascript:;">北京店</a></li>
+		</ul>
+		<div class="clearfix table-wrap" id="tab-span">
+			<span class="table-item table-active">北京店</span>
+			<span class="table-item">上海店</span>
+			<span class="table-item">厦门店</span>
+			<span class="table-item">广州店</span>
+			<span class="table-item">深圳店</span>
+			<span class="table-item">其他</span>
+			<div class="search clearfix">
+
+
+
+				<input class="inp-txt" type="text" name="address" value="输入关键字" id="name"
+				onfocus="if(this.value=='输入关键字'){this.value=''};this.style.color='black';"
+				onblur="if(this.value==''||this.value=='输入关键字'){this.value='输入关键字';
+				this.style.color='gray';}" />
+				<input class="inp-btn" type="button" name="" id="" value="搜索" />
+
+
+			</div>
+		</div>
+		<div id="table-div">
+			<div class="table-pic table-show clearfix" >
+
+                <div id="response"></div>
+
+                <div id="delete_tag">
+                    {% for shop in shop_list %}
+                    <a href="/shop-con/{{ shop.id }}" class="shop-wrap">
+                        <span class="shop-pic">
+                            <img src="/static/img/shop-pic1.jpg" alt="" />
+                        </span>
+                        <div class="shop-tit">{{ shop.name }}</div>
+                    </a>
+                    {% endfor %}
+                </div>
+			</div>
+			<ul class="shop-paging clearfix">
+				<li><a href="/shop-con/" class="pag-item">&lt;</a></li>
+				<li><a href="/shop-con/" class="pag-item pag-active">1</a></li>
+				<li><a href="javascript:;" class="pag-item">2</a></li>
+				<li><a href="javascript:;" class="pag-item">3</a></li>
+				<li><a href="javascript:;" class="pag-item">4</a></li>
+				<li><a href="javascript:;" class="pag-item">&gt;</a></li>
+			</ul>
+		</div>
+        <script>
+        $('#name').blur(function(){
+            var value = $('#name').val();
+            var url = '/find_shop/?shop_name='+value;
+            console.log(url);
+            $.ajax(
+                {
+                    url: url,
+                    type: 'get',
+                    data: '',
+                    success:function(data) {
+                       f(data)
+                    },
+                    error:function (error) {
+                        console.log(error)
+                    }
+                }
+            )
+        });
+        function f(data) {
+            var response_data = data['shop_data'];
+             $(function(){
+                    $("#delete_tag").each(function(){//寻找#test下面所有的div
+                        $(this).empty();//清空#test下面所有的内容
+                        })
+                    });
+            for(var i in response_data) {
+                var shop_name = response_data[i]['name'];
+                var shop_id = response_data[i]['id'];
+                var html =
+                '<a href="/shop-con/'+shop_id+
+                '/" class="shop-wrap">'+
+                '<span class="shop-pic">'+
+                '<img src="/static/img/shop-pic1.jpg" alt="" />'+
+                '</span>'+
+                '<p class="shop-tit">'+shop_name+'</p>'+
+                '</a>';
+                $('#delete_tag').append(html);
+                console.log(html)
+            }
+        }
+        </script>
+    {% endblock %}

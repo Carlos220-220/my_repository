@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+    {% block title %}
+    {% endblock %}
+    {% block content %}
+		<ul class="breadnav clearfix">
+			<li class="bnav-item"><a href="/index/">首页</a></li>
+			<li class="bnav-item">&lt;</li>
+			<li class="bnav-item"><a href="/news/">新闻资讯</a></li>
+			<li class="bnav-item">&lt;</li>
+
+		</ul>
+		<p>{{ news.content }}</p>
+        <img src="/static/{{ news.image }}">
+			
+			<a href="/index/" class="shop-icon">返回首页</a>
+		</div>
+    {% endblock %}

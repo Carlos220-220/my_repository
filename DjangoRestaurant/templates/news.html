@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+		{% block content %}
+		<div id="container">
+			<div id="buttons">
+		        <span index="1" class="on"></span>
+		        <span index="2"></span>
+		        <span index="3"></span>
+		    </div>
+		    <a href="javascript:;" id="prev" class="arrow"><img src="/static/img/l.png"/></a>
+		    <a href="javascript:;" id="next" class="arrow"><img src="/static/img/r.png"/></a>
+		</div>
+		
+		<ul class="breadnav clearfix">
+			<li class="bnav-item"><a href="/index/">首页</a></li>
+			<li class="bnav-item">&lt;</li>
+			<li class="bnav-item"><a href="/news/">新闻资讯</a></li>
+		</ul>
+		<div class="newslist-wrap">
+			<p class="newslist-tit">新闻资讯</p>
+
+            {% for news in news_list %}
+
+			<dl class="newslist-box clearfix">
+				<dt class="newslist-pic">
+					<img src="/static/img/news-pic1.jpg"/>
+				</dt>
+				<dd class="newslist-txt">
+					<a href="/news-con/" class="newslist-font24">{{ news.title }}</a>
+					<ul class="newslist-ul">
+						<li class="newslist-li">
+							<p class="newslist-time">{{ news.time }}</p>
+						</li>
+						<li class="newslist-li">
+							<a href="/news-con/" class="newslist-con">{{ news.description }}</a>
+						</li>
+						<li class="newslist-li"><a class="newslist-link" href="/news-con/">&lt;阅读全文&gt;</a></li>
+					</ul>
+				</dd>
+			</dl>
+            <span class="news-line">
+				<img src="/static/img/news-line.png"/>
+			</span>
+            {% endfor %}
+
+
+
+			<ul class="shop-paging clearfix">
+				<li><a href="javascript:;" class="pag-item">&lt;</a></li>
+                {% for p in page_obj.page_range %}
+				<li><a href="/news/" class="pag-item">{{ p }}</a></li>
+                {% endfor %}
+
+			</ul>
+		</div>
+		{% endblock %}

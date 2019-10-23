@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <p>
+            <label>姓名:</label>
+            <input type="text" name="u">
+
+        </p>
+        <p>
+            <label>性别:</label>
+            <input type="radio" name="g" value="nan">男
+            <input type="radio" name="g" value="nv">女
+        </p>
+        <p>
+            <label>密码:</label>
+            <input type="password" name="p">
+        </p>
+{#        <p>#}
+{#            <label>美食名称:</label>#}
+{#            <input type="text" name="d">#}
+{#        </p>#}
+        <p>
+            <input type="submit" value="提交">
+        </p>
+
+<p>
+    <label>美食名称:</label>
+    <input type="text" name="d" id="name">
+</p>
+<div id="response"></div>
+<script src="/static/js/jquery-1.11.0.js"></script>
+<script>
+    $('#name').blur(function(){
+        var value = $('#name').val();
+        var url = '/find_food/?food_name='+value;
+        console.log(url);
+        $.ajax(
+            {
+                url:url,
+                type:'get',
+                data:'',
+                success:function(data){
+                    var response_data = data['food_data'];
+                    for(var i in response_data){
+                        var food_name = response_data[i]['name'];
+                        var html = '<p>'+food_name+'</p>';
+                        $('#response').append(html);
+                        console.log(html)
+                    }
+                },
+                error:function(error) {
+                    console.log(error)
+                }
+            }
+        )
+    })
+</script>
+    </form>
+{#    {% for food in foods_list %}#}
+{#        <p>{{ food.name }}</p>#}
+{#    {% endfor %}#}
+
+
+</body>
+</html>

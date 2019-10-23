@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <p>
+            <label>姓名:</label>
+            <input type="text" name="name">
+        </p>
+        <p>
+            <label>密码:</label>
+            <input type="password" name="psw">
+        </p>
+        <p>
+            <label>新闻题目</label>
+            <select name="title">
+                {% for news in news_list %}
+                <option value="{{ news.title }}">{{ news.title }}</option>
+                {% endfor %}
+            </select>
+
+        </p>
+        <p>
+            <input type="submit" value="提交">
+        </p>
+    </form>
+
+    {% for d in get_data1 %}
+        <p>{{ d }}</p>
+    {% endfor %}
+
+</body>
+</html>

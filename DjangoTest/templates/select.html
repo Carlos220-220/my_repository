@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>新闻汇总</h1>
+    <hr>
+    <div>
+        {% for news in news_list %}
+            <div>{{ news.title }}</div>
+        {% endfor %}
+    </div>
+    <hr>
+    <h2>作者列表</h2>
+    <div>
+        {% for editor in editor_list %}
+            <div>{{ editor.name }}</div>
+        {% endfor %}
+    </div>
+    <hr>
+    <hr>
+
+        {% for news in news_list %}
+            {% for editor in news.editor_id.all %}
+                <div>作者:{{ editor }}</div>
+                <div>作品:{{ news.title }}</div>
+                <div>内容:{{ news.content }}</div>
+            {% endfor %}
+            <hr>
+        {% endfor %}
+
+{% for i in editor1_list %}
+{{ i }}
+{% endfor %}
+<hr>
+{% for i in editor2_list %}
+{{ i }}
+{% endfor %}
+{{ method }}
+{{ news }}
+</body>
+</html>

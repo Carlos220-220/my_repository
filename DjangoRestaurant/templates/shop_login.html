@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div>牛排新食代</div>
+    <form method="post">
+    {% csrf_token %}
+        <p>
+            <label>用户名:</label>
+            <input type="text" name="username">
+        </p>
+        <p>
+            <label>密码:</label>
+            <input type="password" name="password">
+        </p>
+        <p>
+            <input type="submit" value="登录">
+        </p>
+    </form>
+        <a href="/register/">
+            <button>注册新账号</button>
+        </a>
+{% endblock %}

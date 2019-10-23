@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>注册页面</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p>
+            <label>姓名</label>
+            <input type="text" name="username">
+        </p>
+        <p>
+            <label>密码</label>
+            <input type="password" name="password">
+        </p>
+        <p>
+            <input type="submit" value="注册">
+        </p>
+    </form>
+    <p>
+    <a href="/shop_login/">返回登录页面</a>
+    </p>
+{% endblock %}

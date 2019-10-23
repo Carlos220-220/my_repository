@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/static/js/jquery-1.11.0.js"></script>
+</head>
+<body>
+    <form>
+        <p>
+            <label>新闻标题</label>
+            <input type="text" name="title" id="click">
+        </p>
+        <p>
+            <div id="response"></div>
+        </p>
+    </form>
+<script>
+    $('#click').blur(function(){
+        var value = $('#click').val();
+        var url = '/find_news/?get_title='+value;
+        console.log(url);
+        $.ajax(
+            {
+                url:url,
+                type:'get',
+                data:'',
+                success:function(data){
+                    var res_data = data['data_list'];
+                    for(var i in res_data){
+                        console.log(res_data[i]['title']);
+                        var title = res_data[i]['title'];
+                        var html = '<p>' + title + '</p>'
+                        $('#response').append(html)
+                    }
+
+                },
+                error:function(error){
+                    console.log(error)
+                }
+            }
+        )
+    })
+</script>
+
+</body>
+</html>
