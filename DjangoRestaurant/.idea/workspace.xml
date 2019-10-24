@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="699750c0-9587-4fbb-a3e9-c80b3a8e2815" name="Default Changelist" comment="" />
+    <list default="true" id="699750c0-9587-4fbb-a3e9-c80b3a8e2815" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Pet/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Pet/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Pet/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Pet/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Pet/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Pet/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Pet/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Pet/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Pet/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/images/upload/about3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/images/upload/home_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/images/upload/home_01_8eunU9b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/images/upload/home_01_l9YWawO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/images/upload/home_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/images/upload/home_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/images/upload/home_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoTest/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoPet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoPet/DjangoPet/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/DjangoPet/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoPet/DjangoPet/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/DjangoPet/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoPet/DjangoPet/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/DjangoPet/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoPet/DjangoPet/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/DjangoPet/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoPet/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoPet/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/Pet/templates/pet/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoPet/templates/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoPet/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/Pet/templates/pet/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoPet/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoPet/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/Pet/templates/pet/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoPet/templates/pro.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoTest/.idea/DjangoTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoTest/.idea/DjangoTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoTest/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoTest/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoTest/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoTest/.idea/workspace.xml" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,10 +51,15 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1SYo1hPPStyL4FSnTjxbnioC7Vj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DjangoPet" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -70,10 +115,25 @@
       <workItem from="1571749773794" duration="167000" />
       <workItem from="1571753400203" duration="6267000" />
       <workItem from="1571790953925" duration="1244000" />
+      <workItem from="1571796462533" duration="686000" />
+      <workItem from="1571838255899" duration="1087000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
