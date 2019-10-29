@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'Pet',
     'PUser',
     'PShop',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -114,7 +116,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'zh-hans'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
@@ -134,3 +136,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "static")
 
 # STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+# ckeditor
+CKEDITOR_UPLOAD_PATH = 'upload'
+CKEDITOR_IMAGE_BACKEND = 'pillow'
