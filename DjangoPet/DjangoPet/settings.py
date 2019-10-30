@@ -140,3 +140,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "static")
 # ckeditor
 CKEDITOR_UPLOAD_PATH = 'upload'
 CKEDITOR_IMAGE_BACKEND = 'pillow'
+
+PAZE_SIZE = 2

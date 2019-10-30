@@ -6,11 +6,25 @@
     <script src="/static/pshop/vendor/jquery/jquery.min.js"></script>
     <script src="/static/pshop/js/vue-resource.js"></script>
     <script src="/static/pshop/js/vue.min.js"></script>
-
+    <style>
+        .row {
+            padding:20px;
+        }
+    </style>
 {% endblock %}
 {% block content %}
     {% verbatim myblock %}
-        <table class="table dataTable" id="goods_table">
+    <div class="row" id="goods_table">
+        <div class="input-group">
+            <input type="text" id="keywords" class="form-control bg-light border-0 small" placeholder="商品名称">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button" v-on:click="get_keywords_data()">
+                    <i class="fas fa-search fa-sm"></i>
+                </button>
+            </div>
+        </div>
+
+        <table class="table dataTable">
             <tr>
                 <th>商品名称</th>
                 <th>商品价格</th>
@@ -30,6 +44,16 @@
                 </td>
             </tr>
         </table>
+        <div class="dataTables_paginate paging_simple_numbers">
+            <ul class="pagination">
+                <li class="paginate_button page-item" v-for="page in page_range">
+                    <a class="page-link" v-on:click="get_page_data(page)">
+                        {{ page }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+        </div>
     {% endverbatim myblock %}
 {% endblock %}
 {% block script %}
@@ -40,13 +64,15 @@
                 el: '#goods_table',
                 data: {
                     'message': 'hello world',
-                    'goods_list': []
+                    'goods_list': [],
+                    'page_range': [],
+                    'referer': ''
                 },
                 created: function () {
                     this.$http.get('/PShop/Goods/').then(
                         function (data) {
-                            console.log(data['data']['data']);
                             this.goods_list = data['data']['data'];
+                            this.page_range = data['data']['page_range'];
                         },
                         function (error) {
                             console.log(error);
@@ -54,8 +80,34 @@
                     )
                 },
                 methods: {
-
-                }
+                    get_page_data: function (page) {
+                        var url='/PShop/Goods/?page='+page+this.referer;
+                        this.$http.get(url).then(
+                        function (data) {
+                            console.log(data['data']['data']);
+                            this.goods_list = data['data']['data'];
+                            this.page_range = data['data']['page_range'];
+                        },
+                        function (error) {
+                            console.log(error);
+                        }
+                    )
+                    },
+                    get_keywords_data: function () {
+                        var keywords = $('#keywords').val();
+                        var url = '/PShop/Goods/?keywords='+keywords;
+                        this.$http.get(url).then(
+                        function (data) {
+                            this.goods_list = data['data']['data'];
+                            this.page_range = data['data']['page_range'];
+                            this.referer = data['data']['referer'];
+                        },
+                        function (error) {
+                            console.log(error)
+                        }
+                        )
+                    },
+                },
             }
         )
     </script>

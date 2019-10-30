@@ -252,12 +252,17 @@ def change_goods(request, id):
 
 from django.views import View
 from django.http import JsonResponse
+from django.core.paginator import Paginator
+from DjangoPet.settings import PAZE_SIZE
+
+
 class GoodsView(View):
     def get(self, request):
         result = {
             'version': 'v1',
             'code': '200',
             'data': [],
+            'page_range': []
         }
         id = request.GET.get('id')
         if id:
@@ -275,14 +280,24 @@ class GoodsView(View):
                 }
             )
         else:
-            goods_data = [{'name': g.name,
+            page_number = request.GET.get('page', 1)
+            keywords = request.GET.get('keywords')
+            all_goods = Goods.objects.all()
+            if keywords:
+                all_goods = Goods.objects.filter(name__contains=keywords)
+                result['referer'] = '&keywords=%s' % keywords
+            paginator = Paginator(all_goods, PAZE_SIZE)
+            page_data = paginator.page(page_number)
+            result['page_range'] = list(paginator.page_range)
+            goods_data = [{'id': g.id,
+                           'name': g.name,
                            'price': g.price,
                            'number': g.number,
                            'production': g.production,
                            'safe_date': g.safe_date,
                            'picture': g.picture.url,
                            'description': g.description,
-                           'statue': g.statue} for g in Goods.objects.all()
+                           'statue': g.statue} for g in page_data
                           ]
             result['data'] = goods_data
         return JsonResponse(result)
