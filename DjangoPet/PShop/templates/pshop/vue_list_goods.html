@@ -35,10 +35,10 @@
             </tr>
             <tr v-for="g in goods_list">
                 <td>{{ g.name }}</td>
-                <td>{{ g.price }}</td>
-                <td>{{ g.number }}</td>
+                <td>{{ g.price }}元</td>
+                <td>{{ g.number }}件</td>
                 <td>{{ g.production }}</td>
-                <td>{{ g.safe_date }}</td>
+                <td>{{ g.safe_date }}年</td>
                 <td>
                     <a class="btn btn-primary" style="color:white;">下架</a>
                 </td>
@@ -84,7 +84,6 @@
                         var url='/PShop/Goods/?page='+page+this.referer;
                         this.$http.get(url).then(
                         function (data) {
-                            console.log(data['data']['data']);
                             this.goods_list = data['data']['data'];
                             this.page_range = data['data']['page_range'];
                         },

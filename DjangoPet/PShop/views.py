@@ -11,7 +11,11 @@ def login_valid(fun):
         id_cookie = request.COOKIES.get('user_id')
         email_session = request.session.get('email')
         if email_cookie and id_cookie and email_session and email_cookie == email_session:
-            return fun(request, *args, **kwargs)
+            user = User.objects.get(email=email_cookie)
+            identity = user.identity
+            if identity >= 1:
+                return fun(request, *args, **kwargs)
+            return HttpResponseRedirect('/Buyer/')
         else:
             return HttpResponseRedirect('/PShop/login/')
 
@@ -29,7 +33,7 @@ def register(request):
         else:
             post_password = set_password(user_password)
             add_user(email=user_email, password=post_password)
-            return HttpResponseRedirect(request, '/PShop/login/')
+            return HttpResponseRedirect('/PShop/login/')
     return render(request, 'pshop/register.html', locals())
 
 
@@ -187,9 +191,9 @@ def profile_password(request):
 
 @login_valid
 def list_goods(request):
-    goods_list = Goods.objects.all()
     user_email = request.COOKIES.get('email')
     user = User.objects.get(email=user_email)
+    goods_list = Goods.objects.filter(goods_store=user.id)
 
     return render(request, 'pshop/list_goods.html', locals())
 
@@ -212,11 +216,12 @@ def goods(request, id):
     goods_data = Goods.objects.get(id=int(id))
     return render(request, 'pshop/goods.html', locals())
 
-
+from PShop.models import *
 @login_valid
 def change_goods(request, id):
     user_email = request.COOKIES.get('email')
     user = User.objects.get(email=user_email)
+    type_list = GoodsType.objects.all()
     if int(id) != 0:
         goods_data = Goods.objects.get(id=int(id))
         goods = Goods.objects.get(id=int(id))
@@ -229,6 +234,7 @@ def change_goods(request, id):
         safe_date = get_data.get('safe_date')
         description = get_data.get('description')
         picture = request.FILES.get('picture')
+        goods_type = get_data.get('goods_type')
         if int(id) == 0:
             global goods
             goods = Goods()
@@ -238,9 +244,15 @@ def change_goods(request, id):
         goods.production = production.replace('年', '-').replace('月', '-').replace('日', '')
         goods.safe_date = safe_date
         goods.description = description
+        # 保存商店
+        # 获取cookie当中的店铺
+        store_id = request.COOKIES.get('email')
+        # 获取店铺信息
+        goods.goods_store = User.objects.get(email=store_id)
         if picture:
             goods.picture = picture
         goods.statue = 0
+        goods.goods_type_id = goods_type
         goods.save()
         if int(id):
             return HttpResponseRedirect('/PShop/goods/%s' % id)

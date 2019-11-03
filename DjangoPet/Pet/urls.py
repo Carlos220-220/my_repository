@@ -3,7 +3,7 @@ from Pet.views import *
 
 
 urlpatterns = [
-    re_path(r'^$', index),
+    # re_path(r'^$', index),
     path('index/', index),
     path('about/', about),
     path('pro/', pro),

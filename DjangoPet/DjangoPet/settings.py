@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'PShop',
     'ckeditor',
     'ckeditor_uploader',
+    'Buyer',
 ]
 
 MIDDLEWARE = [
@@ -141,4 +142,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "static")
 CKEDITOR_UPLOAD_PATH = 'upload'
 CKEDITOR_IMAGE_BACKEND = 'pillow'
 
-PAZE_SIZE = 2
+PAZE_SIZE = 8
