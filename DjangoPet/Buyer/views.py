@@ -26,6 +26,18 @@ def list(request):
 
 def goods(request, id):
     goods_msg = Goods.objects.get(id=int(id))
+    email = request.COOKIES.get('email')
+    if email:
+        now_data = History.objects.filter(user_email=email).order_by('id')
+        if len(now_data) >= 5:
+            now_data[0].delete()
+        history = History()
+        history.user_email = email
+        history.goods_id = id
+        history.goods_name = goods_msg.name
+        history.goods_picture = goods_msg.picture
+        history.goods_price = goods_msg.price
+        history.save()
     return render(request, 'buyer/goods.html', locals())
 
 
@@ -195,3 +207,11 @@ def place_order(request):
         p_order = Pay_order.objects.get(order_id=order_id)
         order_info = p_order.order_info_set.all()
     return render(request, 'buyer/place_order.html', locals())
+
+
+def user_center_info(request):
+    user_email = request.COOKIES.get('email')
+    user = User.objects.get(email=user_email)
+    goods_list = History.objects.filter(user_email=user_email)
+    return render(request, 'buyer/user_center_info.html', locals())
+

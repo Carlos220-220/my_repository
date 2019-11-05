@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99feb6d1-e37f-489a-9369-9e011f707bce" name="Default Changelist" comment="vue+ajax分页查询模糊查询">
+      <change afterPath="$PROJECT_DIR$/Buyer/templates/buyer/user_center_info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Buyer/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Buyer/templates/buyer/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/templates/buyer/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Buyer/templates/buyer/place_order.html" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/templates/buyer/place_order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Buyer/templatetags/set_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/templatetags/set_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buyer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Buyer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoPet/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoPet/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,19 +87,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\PythonProgram\my_repository\DjangoPet\PShop\static\pshop" />
-      <recent name="E:\PythonProgram\my_repository\DjangoPet\PShop\templates\pshop" />
-      <recent name="E:\PythonProgram\my_repository\DjangoPet\PUser" />
-      <recent name="E:\PythonProgram\my_repository\DjangoPet\static\pet" />
-      <recent name="E:\PythonProgram\my_repository\DjangoPet\Pet\static\pet" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\PythonProgram\my_repository\DjangoPet\Buyer\templates\buyer" />
       <recent name="E:\PythonProgram\my_repository\DjangoPet\static\buyer\js" />
       <recent name="E:\PythonProgram\my_repository\DjangoPet\Buyer\static\buyer" />
       <recent name="E:\PythonProgram\my_repository\DjangoPet\PShop\static\pshop\js" />
       <recent name="E:\PythonProgram\my_repository\DjangoPet\static\pshop\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\PythonProgram\my_repository\DjangoPet\PShop\static\pshop" />
+      <recent name="E:\PythonProgram\my_repository\DjangoPet\PShop\templates\pshop" />
+      <recent name="E:\PythonProgram\my_repository\DjangoPet\PUser" />
+      <recent name="E:\PythonProgram\my_repository\DjangoPet\static\pet" />
+      <recent name="E:\PythonProgram\my_repository\DjangoPet\Pet\static\pet" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -208,7 +207,7 @@
       <workItem from="1572786713979" duration="2944000" />
       <workItem from="1572830267823" duration="31512000" />
       <workItem from="1572914194023" duration="1324000" />
-      <workItem from="1572917443507" duration="9735000" />
+      <workItem from="1572917443507" duration="13936000" />
     </task>
     <task id="LOCAL-00001" summary="vue+ajax分页查询模糊查询">
       <created>1572421211782</created>
@@ -251,8 +250,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Buyer/views.py</url>
-          <line>50</line>
+          <line>62</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Buyer/views.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

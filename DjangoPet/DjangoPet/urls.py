@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('PShop/', include('PShop.urls')),
     path('Pet/', include('Pet.urls')),
-    re_path(r'^$', include('Buyer.urls')),
+    re_path(r'^', include('Buyer.urls')),
     path('Buyer/', include('Buyer.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
