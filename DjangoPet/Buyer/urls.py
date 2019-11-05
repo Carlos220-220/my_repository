@@ -12,5 +12,6 @@ urlpatterns = [
     path('logout/', logout),
     path('register/', register),
     path('valid_email/', valid_email),
-    # path('search_goods/', search_goods),
+    path('add_car/', add_car),
+    path('place_order/', place_order),
 ]

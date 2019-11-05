@@ -2,6 +2,8 @@ from django.http import JsonResponse
 from django.shortcuts import render, HttpResponseRedirect
 from PShop.models import *
 from PShop.views import set_password, valid_user
+from Buyer.models import *
+import time
 
 
 def index(request):
@@ -46,6 +48,43 @@ def login_valid(fun):
 
 @login_valid
 def cart(request):
+    user = request.COOKIES.get('email')
+    goods_list = BuyCar.objects.filter(car_user=user)
+    num = len(goods_list)
+    if request.method == 'POST':
+        data = request.POST
+        post_data = []
+        for key in data:
+            if key.startswith('check'):
+                id = key.split('_')[1]
+                num = 'number_%s' % id
+                number = data[num]
+                post_data.append((id, number))
+
+        p_order = Pay_order()
+        p_order.order_id = str(time.time()).replace('.', '')
+        p_order.order_number = len(post_data)
+        p_order.order_user = User.objects.get(email=request.COOKIES.get('email'))
+        p_order.save()
+
+        order_total = 0
+
+        for id, number in post_data:
+            number = int(number)
+            goods = Goods.objects.get(id=int(id))
+            o_info = Order_info()
+            o_info.order_id = p_order
+            o_info.goods_name = goods.name
+            o_info.goods_number = number
+            o_info.goods_price = goods.price
+            o_info.goods_total = number*goods.price
+            o_info.goods_picture = goods.picture.url
+            o_info.order_store = goods.goods_store
+            o_info.save()
+            order_total += o_info.goods_total
+        p_order.order_total = order_total
+        p_order.save()
+        return HttpResponseRedirect('/Buyer/place_order/')
     return render(request, 'buyer/cart.html', locals())
 
 
@@ -116,6 +155,32 @@ def valid_email(request):
             re_data.append({'re': 'False'})
         return JsonResponse({'re_data': re_data})
 
+@login_valid
+def add_car(request):
+    result = {'state': 'error', 'data': ''}
+    if request.method == 'POST':
+        user = request.COOKIES.get('email')
+        goods_id = request.POST.get('goods_id')
+        number = request.POST.get('number', 1)
+        try:
+            goods = Goods.objects.get(id=goods_id)
+        except Exception as e:
+            result['data'] = str(e)
+        else:
+            car = BuyCar()
+            car.car_user = user
+            car.goods_name = goods.name
+            car.goods_picture = goods.picture
+            car.goods_price = goods.price
+            car.goods_number = number
+            car.goods_total = int(number)*goods.price
+            car.goods_store = goods.goods_store.id
+            car.goods_id = goods.id
+            car.save()
+            result['state'] = 'susses'
+            result['data'] = '加入购物车成功'
+    return JsonResponse(result)
 
-def add_goods(request):
-    goods = request.POST.get
+
+def place_order(request):
+    return render(request, 'buyer/place_order.html', locals())

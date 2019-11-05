@@ -48,8 +48,7 @@
 						<span class="prize">￥{{ goods.price }}</span>
 						<span class="unit">{{ goods.price }}/500g</span>
 
-                        <input type="hidden" value="{{ goods.name }}" name="goods_name" id="goods_name">
-						<a href="javascripts:;"  class="add_goods" title="加入购物车"></a>
+						<a id="{{ goods.id }}"  class="add_goods" title="加入购物车" onclick="add_car(this.id)"></a>
 
 
 
@@ -83,11 +82,26 @@
 	<script type="text/javascript" src="/static/buyer/js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="/static/buyer/js/slide.js"></script>
     <script>
-
-     $('.add_goods').click(function () {
-            var value = $('#goods_name').val();
-            console.log(value);
-        })
+        function add_car (obj) {
+            var post_data = {
+                'goods_id': obj,
+                'csrfmiddlewaretoken': '{{ csrf_token }}'
+            };
+            console.log(post_data);
+            $.ajax(
+                {
+                    url: '/Buyer/add_car/',
+                    type: 'post',
+                    data: post_data,
+                    success: function(data) {
+                        alert(data['data'])
+                    },
+                    error: function(error) {
+                        console.log(error)
+                    }
+                }
+            )
+        }
     </script>
 
 {% endblock %}

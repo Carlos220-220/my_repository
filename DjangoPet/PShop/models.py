@@ -19,4 +19,3 @@ class Goods(models.Model):
     statue = models.IntegerField(null=True)
     goods_type = models.ForeignKey(to=GoodsType, on_delete=models.CASCADE)
     goods_store = models.ForeignKey(to=User, on_delete=models.CASCADE)
-    goods_cart_user = models.ManyToManyField(to=User, related_name='cart_user')

@@ -2,176 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99feb6d1-e37f-489a-9369-9e011f707bce" name="Default Changelist" comment="vue+ajax分页查询模糊查询">
-      <change afterPath="$PROJECT_DIR$/Buyer/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/css/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/adv01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/adv02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/banner01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/banner02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/banner03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/banner04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/banner05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/banner06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/fruit.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods/goods001.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods/goods002.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods/goods003.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods/goods004.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods/goods005.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods/goods006.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods/goods007.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods/goods008.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods/goods009.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods/goods010.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods/goods011.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods/goods012.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods/goods013.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods/goods014.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods/goods015.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods/goods016.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods/goods017.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods/goods018.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods/goods019.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods/goods020.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods/goods021.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/goods_detail.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/icons02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/interval_line.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/left_bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/login_banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/logo02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/pay_icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/register_banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/shop_cart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/slide.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/slide02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/slide03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/images/slide04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/js/jquery-1.12.4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/js/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/js/jquery.cookie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/js/register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/static/buyer/js/slide.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/templates/buyer/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/templates/buyer/cart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/templates/buyer/consumer_base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/templates/buyer/goods.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/templates/buyer/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/templates/buyer/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/templates/buyer/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/templates/buyer/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/templatetags/set_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PShop/migrations/0005_auto_20191030_1906.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PShop/migrations/0006_goods_goods_store.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PShop/migrations/0007_goods_goods_cart_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PUser/migrations/0002_user_identity.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/css/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/adv01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/adv02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/banner01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/banner02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/banner03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/banner04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/banner05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/banner06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/fruit.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods/goods001.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods/goods002.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods/goods003.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods/goods004.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods/goods005.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods/goods006.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods/goods007.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods/goods008.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods/goods009.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods/goods010.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods/goods011.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods/goods012.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods/goods013.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods/goods014.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods/goods015.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods/goods016.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods/goods017.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods/goods018.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods/goods019.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods/goods020.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods/goods021.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/goods_detail.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/icons02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/interval_line.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/left_bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/login_banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/logo02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/pay_icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/register_banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/shop_cart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/slide.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/slide02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/slide03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/images/slide04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/js/jquery-1.12.4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/js/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/js/jquery.cookie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/js/register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/js/slide.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/js/vue-resource.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/buyer/js/vue.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/0010128947-000000000602731243_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/1453106371116.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/166bdd8bde0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/1d1d871e816607f57f2bc7c35d74a354.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/a47b890186147839352.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/b9bf98e309cc98dd9231c17d8189197b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/goods009.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/goods010.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/goods010_Sr3TU9l.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/goods013.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/goods014.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/goods018.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/goods019.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/goods020.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/goods021.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/ooYBAFtVpeGAFbbBAAGrR-o2w-A075.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/timg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/timg_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/timg_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/timg_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/timg_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/timg_5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/timg_6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/u20079504274225406930fm26gp0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/u23106996453451439149fm214gp0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/img/wKhQc1Rt7vCEbhOQAAAAAJu5S6A213.jpg..300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buyer/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buyer/migrations/0002_auto_20191104_1020.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buyer/migrations/0003_auto_20191104_1552.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buyer/migrations/0004_auto_20191104_1901.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buyer/migrations/0005_auto_20191104_1914.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buyer/migrations/0006_buycar_goods_id.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buyer/templates/buyer/place_order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PShop/migrations/0008_remove_goods_goods_cart_user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoPet/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoPet/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoPet/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoPet/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buyer/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buyer/static/buyer/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/static/buyer/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buyer/templates/buyer/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/templates/buyer/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buyer/templates/buyer/consumer_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/templates/buyer/consumer_base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buyer/templates/buyer/goods.html" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/templates/buyer/goods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buyer/templates/buyer/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/templates/buyer/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buyer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buyer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PShop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/PShop/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PShop/templates/pshop/change_goods.html" beforeDir="false" afterPath="$PROJECT_DIR$/PShop/templates/pshop/change_goods.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PShop/templates/pshop/list_goods.html" beforeDir="false" afterPath="$PROJECT_DIR$/PShop/templates/pshop/list_goods.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PShop/templates/pshop/vue_list_goods.html" beforeDir="false" afterPath="$PROJECT_DIR$/PShop/templates/pshop/vue_list_goods.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PShop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PShop/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PUser/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/PUser/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pet/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pet/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/buyer/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/buyer/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DjangoRestaurant/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoRestaurant/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -248,23 +97,24 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/Teacher_/15day/0805Django/Qshop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Buyer/templates/buyer" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\PythonProgram\my_repository\DjangoPet\static\buyer\js" />
-      <recent name="E:\PythonProgram\my_repository\DjangoPet\Buyer\templates\buyer" />
-      <recent name="E:\PythonProgram\my_repository\DjangoPet\Buyer\static\buyer" />
-      <recent name="E:\PythonProgram\my_repository\DjangoPet\PShop\static\pshop\js" />
-      <recent name="E:\PythonProgram\my_repository\DjangoPet\static\pshop\js" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\PythonProgram\my_repository\DjangoPet\PShop\static\pshop" />
       <recent name="E:\PythonProgram\my_repository\DjangoPet\PShop\templates\pshop" />
       <recent name="E:\PythonProgram\my_repository\DjangoPet\PUser" />
       <recent name="E:\PythonProgram\my_repository\DjangoPet\static\pet" />
       <recent name="E:\PythonProgram\my_repository\DjangoPet\Pet\static\pet" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\PythonProgram\my_repository\DjangoPet\Buyer\templates\buyer" />
+      <recent name="E:\PythonProgram\my_repository\DjangoPet\static\buyer\js" />
+      <recent name="E:\PythonProgram\my_repository\DjangoPet\Buyer\static\buyer" />
+      <recent name="E:\PythonProgram\my_repository\DjangoPet\PShop\static\pshop\js" />
+      <recent name="E:\PythonProgram\my_repository\DjangoPet\static\pshop\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -369,6 +219,8 @@
       <workItem from="1572659381005" duration="24295000" />
       <workItem from="1572696949864" duration="7989000" />
       <workItem from="1572766047966" duration="17282000" />
+      <workItem from="1572786713979" duration="2944000" />
+      <workItem from="1572830267823" duration="31512000" />
     </task>
     <task id="LOCAL-00001" summary="vue+ajax分页查询模糊查询">
       <created>1572421211782</created>
@@ -408,6 +260,11 @@
           <url>file://$USER_HOME$/Desktop/冒泡.py</url>
           <line>7</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Buyer/views.py</url>
+          <line>50</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

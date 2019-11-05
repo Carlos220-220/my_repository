@@ -2,45 +2,171 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="699750c0-9587-4fbb-a3e9-c80b3a8e2815" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../DjangoPet/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjangoPet/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjangoPet/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjangoPet/Pet/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjangoPet/Pet/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjangoPet/Pet/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjangoPet/Pet/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjangoPet/Pet/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjangoPet/Pet/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjangoPet/Pet/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjangoPet/Pet/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjangoPet/Pet/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/images/upload/about3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/images/upload/home_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/images/upload/home_01_8eunU9b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/images/upload/home_01_l9YWawO.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/images/upload/home_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/images/upload/home_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/images/upload/home_04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjangoTest/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/css/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/adv01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/adv02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/banner01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/banner02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/banner03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/banner04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/banner05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/banner06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/fruit.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods/goods001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods/goods002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods/goods003.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods/goods004.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods/goods005.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods/goods006.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods/goods007.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods/goods008.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods/goods009.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods/goods010.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods/goods011.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods/goods012.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods/goods013.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods/goods014.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods/goods015.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods/goods016.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods/goods017.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods/goods018.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods/goods019.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods/goods020.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods/goods021.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/goods_detail.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/icons02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/interval_line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/left_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/login_banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/logo02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/pay_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/register_banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/shop_cart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/slide.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/slide02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/slide03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/images/slide04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/js/jquery-1.12.4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/js/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/js/jquery.cookie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/js/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/static/buyer/js/slide.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/templates/buyer/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/templates/buyer/cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/templates/buyer/consumer_base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/templates/buyer/goods.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/templates/buyer/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/templates/buyer/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/templates/buyer/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/templates/buyer/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/templatetags/set_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/Buyer/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/PShop/migrations/0005_auto_20191030_1906.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/PShop/migrations/0006_goods_goods_store.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/PUser/migrations/0002_user_identity.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/css/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/adv01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/adv02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/banner01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/banner02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/banner03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/banner04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/banner05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/banner06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/fruit.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods/goods001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods/goods002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods/goods003.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods/goods004.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods/goods005.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods/goods006.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods/goods007.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods/goods008.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods/goods009.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods/goods010.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods/goods011.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods/goods012.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods/goods013.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods/goods014.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods/goods015.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods/goods016.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods/goods017.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods/goods018.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods/goods019.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods/goods020.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods/goods021.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/goods_detail.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/icons02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/interval_line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/left_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/login_banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/logo02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/pay_icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/register_banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/shop_cart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/slide.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/slide02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/slide03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/images/slide04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/js/jquery-1.12.4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/js/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/js/jquery.cookie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/js/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/js/slide.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/js/vue-resource.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/buyer/js/vue.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/pshop/img/0010128947-000000000602731243_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/pshop/img/1453106371116.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/pshop/img/166bdd8bde0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/pshop/img/1d1d871e816607f57f2bc7c35d74a354.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/pshop/img/a47b890186147839352.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/pshop/img/b9bf98e309cc98dd9231c17d8189197b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/pshop/img/goods009.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/pshop/img/goods010.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/pshop/img/goods010_Sr3TU9l.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/pshop/img/goods013.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/pshop/img/goods014.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/pshop/img/goods018.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/pshop/img/goods019.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/pshop/img/goods020.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/pshop/img/goods021.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/pshop/img/ooYBAFtVpeGAFbbBAAGrR-o2w-A075.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/pshop/img/timg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/pshop/img/timg_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/pshop/img/timg_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/pshop/img/u23106996453451439149fm214gp0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DjangoPet/static/pshop/img/wKhQc1Rt7vCEbhOQAAAAAJu5S6A213.jpg..300x300.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DjangoPet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DjangoPet/DjangoPet/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/DjangoPet/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DjangoPet/DjangoPet/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/DjangoPet/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DjangoPet/DjangoPet/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/DjangoPet/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DjangoPet/DjangoPet/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/DjangoPet/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DjangoPet/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DjangoPet/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/Pet/templates/pet/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DjangoPet/templates/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DjangoPet/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/Pet/templates/pet/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DjangoPet/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DjangoPet/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/Pet/templates/pet/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DjangoPet/templates/pro.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoPet/PShop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/PShop/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoPet/PShop/templates/pshop/change_goods.html" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/PShop/templates/pshop/change_goods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoPet/PShop/templates/pshop/list_goods.html" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/PShop/templates/pshop/list_goods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoPet/PShop/templates/pshop/vue_list_goods.html" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/PShop/templates/pshop/vue_list_goods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoPet/PShop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/PShop/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoPet/PUser/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/PUser/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoPet/Pet/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoPet/Pet/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DjangoTest/.idea/DjangoTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoTest/.idea/DjangoTest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DjangoTest/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DjangoTest/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DjangoTest/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DjangoTest/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,6 +243,7 @@
       <workItem from="1571790953925" duration="1244000" />
       <workItem from="1571796462533" duration="686000" />
       <workItem from="1571838255899" duration="1087000" />
+      <workItem from="1572668667043" duration="2504000" />
     </task>
     <servers />
   </component>
