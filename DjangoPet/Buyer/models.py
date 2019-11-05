@@ -41,9 +41,3 @@ class History(models.Model):
     goods_picture = models.TextField()
 
 
-class GoodsAddress(models.Model):
-    recver = models.CharField(max_length=64)
-    address = models.TextField()
-    post_number = models.CharField(max_length=32)
-    phone = models.CharField(max_length=32)
-    state = models.IntegerField()

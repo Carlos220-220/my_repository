@@ -113,8 +113,8 @@ def login(request):
             db_password = user.password
             if post_password == db_password:
                 referer = request.POST.get('referer')
-                if referer in ('http://127.0.0.1:8000/Buyer/login/', "None"):
-                    referer = HttpResponseRedirect('/')
+                if referer in ('http://127.0.0.1:8000/Buyer/login/', "None",'http://127.0.0.1:8000/Buyer/register/'):
+                    referer = '/'
                 response = HttpResponseRedirect(referer)
                 response.set_cookie('email', user.email)
                 response.set_cookie('user_id', user.id)
@@ -202,16 +202,42 @@ def add_car(request):
 
 
 def place_order(request):
+    user_email = request.COOKIES.get('email')
+    addr = GoodsAddress.objects.filter(user_email=user_email)
     order_id = request.GET.get('order_id')
     if order_id:
         p_order = Pay_order.objects.get(order_id=order_id)
         order_info = p_order.order_info_set.all()
     return render(request, 'buyer/place_order.html', locals())
 
-
+@login_valid
 def user_center_info(request):
     user_email = request.COOKIES.get('email')
     user = User.objects.get(email=user_email)
+    addr = GoodsAddress.objects.get(state=1)
     goods_list = History.objects.filter(user_email=user_email)
     return render(request, 'buyer/user_center_info.html', locals())
 
+@login_valid
+def user_center_site(request):
+    email = request.COOKIES.get('email')
+    user_data = User.objects.get(email=email)
+    try:
+        addr = user_data.goodsaddress_set.filter(state=1)[0]
+    except Exception as e:
+        error = '暂无地址信息'
+    if request.method == 'POST':
+        recv = request.POST.get('recv')
+        address = request.POST.get('address')
+        post_number = request.POST.get('post_number')
+        phone = request.POST.get('phone')
+        addr = GoodsAddress()
+        addr.recver = recv
+        addr.address = address
+        addr.post_number = post_number
+        addr.phone = phone
+        addr.state = 0
+        addr.user_email = user_data.email
+        addr.all_address = user_data
+        addr.save()
+    return render(request, 'buyer/user_center_site.html', locals())

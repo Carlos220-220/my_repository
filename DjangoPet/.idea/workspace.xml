@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99feb6d1-e37f-489a-9369-9e011f707bce" name="Default Changelist" comment="vue+ajax分页查询模糊查询">
-      <change afterPath="$PROJECT_DIR$/Buyer/templates/buyer/user_center_info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buyer/migrations/0008_delete_goodsaddress.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buyer/templates/buyer/user_center_site.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PUser/migrations/0003_goodsaddress.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PUser/migrations/0004_goodsaddress_all_address.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PUser/migrations/0005_goodsaddress_uesr.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PUser/migrations/0006_auto_20191105_2111.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buyer/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buyer/templates/buyer/consumer_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/templates/buyer/consumer_base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buyer/templates/buyer/place_order.html" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/templates/buyer/place_order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buyer/templates/buyer/user_center_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/templates/buyer/user_center_info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buyer/templatetags/set_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/templatetags/set_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Buyer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Buyer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoPet/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoPet/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PUser/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/PUser/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +92,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Buyer/templates/buyer" />
+    <property name="last_opened_file_path" value="E:/Teacher_/18day/0805Django/Qshop" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -207,7 +217,7 @@
       <workItem from="1572786713979" duration="2944000" />
       <workItem from="1572830267823" duration="31512000" />
       <workItem from="1572914194023" duration="1324000" />
-      <workItem from="1572917443507" duration="13936000" />
+      <workItem from="1572917443507" duration="27250000" />
     </task>
     <task id="LOCAL-00001" summary="vue+ajax分页查询模糊查询">
       <created>1572421211782</created>
@@ -247,16 +257,6 @@
           <url>file://$USER_HOME$/Desktop/冒泡.py</url>
           <line>7</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Buyer/views.py</url>
-          <line>62</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Buyer/views.py</url>
-          <line>27</line>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
