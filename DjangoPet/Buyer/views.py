@@ -77,14 +77,14 @@ def cart(request):
             o_info.goods_name = goods.name
             o_info.goods_number = number
             o_info.goods_price = goods.price
-            o_info.goods_total = number*goods.price
+            o_info.goods_total = number * goods.price
             o_info.goods_picture = goods.picture.url
             o_info.order_store = goods.goods_store
             o_info.save()
             order_total += o_info.goods_total
         p_order.order_total = order_total
         p_order.save()
-        return HttpResponseRedirect('/Buyer/place_order/')
+        return HttpResponseRedirect('/Buyer/place_order/?order_id=%s' % p_order.order_id)
     return render(request, 'buyer/cart.html', locals())
 
 
@@ -101,7 +101,7 @@ def login(request):
             db_password = user.password
             if post_password == db_password:
                 referer = request.POST.get('referer')
-                if referer in ('http://127.0.0.1:8000/Buyer/login/',"None"):
+                if referer in ('http://127.0.0.1:8000/Buyer/login/', "None"):
                     referer = HttpResponseRedirect('/')
                 response = HttpResponseRedirect(referer)
                 response.set_cookie('email', user.email)
@@ -145,6 +145,7 @@ def register(request):
         return HttpResponseRedirect('/Buyer/login/')
     return render(request, 'buyer/register.html', locals())
 
+
 def valid_email(request):
     if request.method == 'GET':
         user_email = request.GET.get('get_email')
@@ -154,6 +155,7 @@ def valid_email(request):
         else:
             re_data.append({'re': 'False'})
         return JsonResponse({'re_data': re_data})
+
 
 @login_valid
 def add_car(request):
@@ -173,7 +175,7 @@ def add_car(request):
             car.goods_picture = goods.picture
             car.goods_price = goods.price
             car.goods_number = number
-            car.goods_total = int(number)*goods.price
+            car.goods_total = int(number) * goods.price
             car.goods_store = goods.goods_store.id
             car.goods_id = goods.id
             car.save()
@@ -182,5 +184,14 @@ def add_car(request):
     return JsonResponse(result)
 
 
+# def pay_order(request):
+#
+#     return render(request, 'buyer/place_order.html', locals())
+
+
 def place_order(request):
+    order_id = request.GET.get('order_id')
+    if order_id:
+        p_order = Pay_order.objects.get(order_id=order_id)
+        order_info = p_order.order_info_set.all()
     return render(request, 'buyer/place_order.html', locals())
