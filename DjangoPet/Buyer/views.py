@@ -241,3 +241,12 @@ def user_center_site(request):
         addr.all_address = user_data
         addr.save()
     return render(request, 'buyer/user_center_site.html', locals())
+
+
+@login_valid
+def user_center_order(request):
+    email = request.COOKIES.get('email')
+    user = User.objects.filter(email=email).first()
+    if user:
+        order_list = user.pay_order_set.all()
+    return render(request, 'buyer/user_center_order.html', locals())

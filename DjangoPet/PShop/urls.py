@@ -20,4 +20,6 @@ urlpatterns = [
     re_path(r'change_goods/(?P<id>\d+)/', change_goods),
     path('Goods/', GoodsView.as_view()),
     path('vue_list_goods/', vue_list_goods),
+    path('order_list/', order_list),
+    path('send_shop/', send_shop),
 ]

@@ -27,7 +27,7 @@
 		<li class="col02"><img src="/static/{{ goods.goods_picture }}"></li>
 		<li class="col03">{{ goods.name }}<br><em>{{ goods.goods_price }}元/500g</em></li>
 		<li class="col04">500g</li>
-		<li class="col05 price" id="price">{{ goods.goods_price }}元</li>
+		<li class="col05 price" id="price" value="{{ goods.goods_price }}">{{ goods.goods_price }}元</li>
 		<li class="col06">
 			<div class="num_add">
 				<a href="javascript:;" class="add fl">+</a>
@@ -63,6 +63,11 @@
                 }
             }
         );
+        {#$('.number').each(#}
+        {#    function change_number(t) {#}
+        {#        var obj = $('this')#}
+        {#    }#}
+        {#);#}
         $('.goods_check').each(
             function(){
                 $(this).click(
@@ -94,26 +99,17 @@
                     function () {
                         var obj = $(this).siblings("input");
                         obj.val(parseInt(obj.val())+1);
+                        var p = $(this).parents().siblings("li");
+                        var a = p[4].value;
+
+
+
+
                     }
                 )
 
             }
         );
-        {#$('.number').blur(#}
-        {#    function() {#}
-        {#        var obj = $('this');#}
-        {#        var value = parseInt(obj.val());#}
-        {#        var price = parseFloat($('#price').text());#}
-        {#        if(value < 1 ){#}
-        {#            value = 1;#}
-        {#            obj.val(value);#}
-        {#        }else if(!value){#}
-        {#            value = 1;#}
-        {#            obj.val(value);#}
-        {#        }#}
-        {#        var total = price*value;#}
-        {#        $('#total').text(total+'元');#}
-        {#    }#}
-        {#);#}
+
     </script>
 {% endblock %}

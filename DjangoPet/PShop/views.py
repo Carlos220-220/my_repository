@@ -320,4 +320,19 @@ def vue_list_goods(request):
     user = User.objects.get(email=user_email)
     return render(request, 'pshop/vue_list_goods.html', locals())
 
+
+def order_list(request):
+    email = request.COOKIES.get('email')
+    user = User.objects.get(email=email)
+    order_list = user.order_info_set.all()
+    return render(request, 'pshop/order_list.html', locals())
+
+from Buyer.models import Pay_order
+def send_shop(request):
+    order_id = request.GET.get('order_id')
+    if order_id:
+        p_order = Pay_order.objects.get(order_id=order_id)
+        p_order.order_state = 2
+        p_order.save()
+    return HttpResponseRedirect('/PShop/order_list/')
 # Create your views here.

@@ -2,21 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99feb6d1-e37f-489a-9369-9e011f707bce" name="Default Changelist" comment="vue+ajax分页查询模糊查询">
-      <change afterPath="$PROJECT_DIR$/Buyer/migrations/0008_delete_goodsaddress.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buyer/templates/buyer/user_center_site.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PUser/migrations/0003_goodsaddress.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PUser/migrations/0004_goodsaddress_all_address.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PUser/migrations/0005_goodsaddress_uesr.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PUser/migrations/0006_auto_20191105_2111.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buyer/templates/buyer/user_center_order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PShop/templates/pshop/order_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Buyer/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buyer/static/buyer/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/static/buyer/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buyer/templates/buyer/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/templates/buyer/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buyer/templates/buyer/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/templates/buyer/cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Buyer/templates/buyer/consumer_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/templates/buyer/consumer_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Buyer/templates/buyer/place_order.html" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/templates/buyer/place_order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Buyer/templates/buyer/user_center_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/templates/buyer/user_center_info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Buyer/templatetags/set_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/templatetags/set_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buyer/templates/buyer/user_center_site.html" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/templates/buyer/user_center_site.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Buyer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Buyer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PUser/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/PUser/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PShop/templates/pshop/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PShop/templates/pshop/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PShop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PShop/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PShop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PShop/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/buyer/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/buyer/css/main.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,24 +92,24 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/Teacher_/18day/0805Django/Qshop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Buyer/templates/buyer" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\PythonProgram\my_repository\DjangoPet\PShop\templates\pshop" />
+      <recent name="E:\PythonProgram\my_repository\DjangoPet\PShop\static\pshop" />
+      <recent name="E:\PythonProgram\my_repository\DjangoPet\PUser" />
+      <recent name="E:\PythonProgram\my_repository\DjangoPet\static\pet" />
+      <recent name="E:\PythonProgram\my_repository\DjangoPet\Pet\static\pet" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\PythonProgram\my_repository\DjangoPet\Buyer\templates\buyer" />
       <recent name="E:\PythonProgram\my_repository\DjangoPet\static\buyer\js" />
       <recent name="E:\PythonProgram\my_repository\DjangoPet\Buyer\static\buyer" />
       <recent name="E:\PythonProgram\my_repository\DjangoPet\PShop\static\pshop\js" />
       <recent name="E:\PythonProgram\my_repository\DjangoPet\static\pshop\js" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\PythonProgram\my_repository\DjangoPet\PShop\static\pshop" />
-      <recent name="E:\PythonProgram\my_repository\DjangoPet\PShop\templates\pshop" />
-      <recent name="E:\PythonProgram\my_repository\DjangoPet\PUser" />
-      <recent name="E:\PythonProgram\my_repository\DjangoPet\static\pet" />
-      <recent name="E:\PythonProgram\my_repository\DjangoPet\Pet\static\pet" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -217,7 +217,9 @@
       <workItem from="1572786713979" duration="2944000" />
       <workItem from="1572830267823" duration="31512000" />
       <workItem from="1572914194023" duration="1324000" />
-      <workItem from="1572917443507" duration="27250000" />
+      <workItem from="1572917443507" duration="31405000" />
+      <workItem from="1573002526240" duration="8425000" />
+      <workItem from="1573038126651" duration="674000" />
     </task>
     <task id="LOCAL-00001" summary="vue+ajax分页查询模糊查询">
       <created>1572421211782</created>
