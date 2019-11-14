@@ -63,7 +63,8 @@ def login(request):
 def index(request):
     user_email = request.COOKIES.get('email')
     user = User.objects.get(email=user_email)
-    return render(request, 'pshop/index.html', {'user': user})
+    goods_type_count = user.goods_set.all().count()
+    return render(request, 'pshop/index.html', locals())
 
 
 # 退出登陆
@@ -336,3 +337,16 @@ def send_shop(request):
         p_order.save()
     return HttpResponseRedirect('/PShop/order_list/')
 # Create your views here.
+
+# 柱状图和饼状图的ajax
+def return_goods_number(request):
+    result = {"goods_name": [], "goods_number": [], "goods_list": []}
+    id = request.GET.get('id')
+    if id:
+        user = User.objects.get(id=id)
+        goods = user.goods_set.order_by("number")[:7]
+        for i in goods:
+            result["goods_name"].append(i.name)
+            result["goods_number"].append(i.number)
+            result["goods_list"].append({"name": i.name, "value": i.number})
+    return JsonResponse(result)

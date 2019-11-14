@@ -1,11 +1,13 @@
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render, HttpResponseRedirect
 from PShop.models import *
 from PShop.views import set_password, valid_user
 from Buyer.models import *
 import time
+from django.views.decorators.cache import cache_page
 
 
+@cache_page(60*5)
 def index(request):
     type_list = GoodsType.objects.all()
     result = [{t.name: t.goods_set.all(), 'pic': t.picture} for t in type_list]
@@ -114,7 +116,7 @@ def login(request):
             if post_password == db_password:
                 referer = request.POST.get('referer')
                 if referer in ('http://127.0.0.1:8000/Buyer/login/', "None",'http://127.0.0.1:8000/Buyer/register/'):
-                    referer = '/'
+                    referer = '/Buyer/'
                 response = HttpResponseRedirect(referer)
                 response.set_cookie('email', user.email)
                 response.set_cookie('user_id', user.id)
@@ -128,7 +130,7 @@ def login(request):
 
 
 def logout(request):
-    response = HttpResponseRedirect('/')
+    response = HttpResponseRedirect('/Buyer/')
     response.delete_cookie('email')
     response.delete_cookie('user_id')
     request.session.clear()
@@ -250,3 +252,10 @@ def user_center_order(request):
     if user:
         order_list = user.pay_order_set.all()
     return render(request, 'buyer/user_center_order.html', locals())
+
+def middle_test(request):
+    def hello():
+        return HttpResponseRedirect('hello world')
+    rep = HttpResponse('你好')
+    rep.render = hello
+    return rep

@@ -23,7 +23,7 @@
     {% else %}
     {% for goods in goods_list %}
 	<ul class="cart_list_td clearfix">
-		<li class="col01"><input class="goods_check" type="checkbox" name="check_{{ goods.goods_id }}" checked></li>
+		<li class="col01"><input class="goods_check" type="checkbox" value="" name="check_{{ goods.goods_id }}" checked></li>
 		<li class="col02"><img src="/static/{{ goods.goods_picture }}"></li>
 		<li class="col03">{{ goods.name }}<br><em>{{ goods.goods_price }}元/500g</em></li>
 		<li class="col04">500g</li>
@@ -45,7 +45,7 @@
 	<ul class="settlements">
 		<li class="col01"><input id="all_check" type="checkbox" name="" checked=""></li>
 		<li class="col02">全选</li>
-		<li class="col03 clearing">合计(不含运费)：<span>¥</span><em>42.60</em><br>共计<b>2</b>件商品</li>
+		<li class="col03">合计(不含运费)：<span>¥</span><em class="clearing">0</em><br>共计<b>2</b>件商品</li>
 		<li class="col04"><input type="submit" value="去结算"></li>
 	</ul>
     {% endif %}
@@ -64,17 +64,7 @@
             }
         );
 
-        $('.goods_check').each(
-            function(){
-                $(this).click(
-                    function(){
-                        if(!this.checked){
-                            $('#all_check').prop('checked', false)
-                        }
-                    }
-                )
-            }
-        );
+
         $(".minus").each(
             function () {
                 $(this).click(
@@ -90,6 +80,13 @@
                             var re_total = price * num;
                             var out = li_p[5].value = re_total;
                             $(li_p[5]).text(out+'元');
+                            var obj = $('.goods_check');
+                            if(obj.attr('checked')){
+                                obj.val(out);
+                                console.log(obj.val())
+                            }else{
+                                obj.val(0)
+                            }
                         }
                     }
                 )
@@ -97,6 +94,12 @@
         );
         $(".add").each(
             function () {
+                var obj = $('.goods_check');
+                var li_p = $(this).parents().siblings("li");
+                var total = li_p[5].value;
+                {#var total = $('.total').val();#}
+                obj[0] = total;
+                console.log(obj[0]);
                 $(this).click(
                     function () {
                         var number = $(this).siblings("input");
@@ -107,23 +110,66 @@
                         var re_total = price * num;
                         var out = li_p[5].value = re_total;
                         $(li_p[5]).text(out+'元');
+                        var obj = $('.goods_check');
+                        if(obj.attr('checked')){
+                            obj.val(out);
+                            console.log(obj.val());
+                        }else{
+                            obj.val(0)
+                        }
                     }
-                )
+
+                );
+                var clearing = $(".clearing");
+                var res = parseFloat(clearing.text());
+                var get_clearing = res + obj[0];
+                {#console.log(get_clearing);#}
+                clearing.text(get_clearing);
+
+
 
             }
         );
 
+
+
+        {#$('input:radio:checked').val();#}
+        {#console.log($('input:radio:checked').val());#}
+
+        {#$('.goods_check').each(#}
+        {#    function () {#}
+        {#        $(this).click(#}
+        {#            $(this).parents().siblings(".total")#}
+        {#            if($(".goods_check").prop("checked")===true){#}
+        {#                console.log($(this).val())#}
+        {#            }#}
+        {#        )#}
+        {#    }#}
+        {#);#}
         $('.goods_check').each(
-            function () {
+            function(){
+                var obj = $('.goods_check');
+                if(obj.attr('checked')) {
+                    {#console.log(obj[0], typeof obj.val());#}
+
+                }
+
+
+                /*
+                if($(this).prop("checked")===true){
+                    var obj = $('.goods_check');
+                        console.log(obj.val())
+
+                }
+                */
                 $(this).click(
-                    $(this).parents().siblings(".total")
-                    if($(".goods_check").prop("checked")===true){
-                        console.log($(this).val())
+                    function(){
+                        if(!this.checked){
+                            $('#all_check').prop('checked', false)
+                        }
                     }
                 )
             }
         );
-
-
     </script>
 {% endblock %}

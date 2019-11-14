@@ -51,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'DjangoPet.middleware.MiddleWareIp',
 ]
 
 ROOT_URLCONF = 'DjangoPet.urls'
@@ -143,3 +144,15 @@ CKEDITOR_UPLOAD_PATH = 'upload'
 CKEDITOR_IMAGE_BACKEND = 'pillow'
 
 PAZE_SIZE = 8
+
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+#         'LOCATION': '127.0.0.1:11211',
+#         'TIMEOUT': '',
+#         'OPTIONS': {
+#             # 'MAX_ENTRIES': 300,
+#             # 'CULL_FREQUENCY': 3,
+#         }
+#     }
+# }
