@@ -1,8 +1,10 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import os
+from flask_restful import Api
 
 app = Flask(__name__)
+api = Api(app)
 
 base_path = os.path.abspath(os.path.dirname(__file__))
 

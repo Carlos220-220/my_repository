@@ -9,30 +9,8 @@
     <div class="row">
         <div class="col-md-9 layout-body">
             
-    <div class="content">
-        <div class="row course-cates">
-            <div class="col-md-1 course-cates-title">类别：</div>
-            <div class="col-md-11 course-cates-content">
-                <a class="active" href="/course/3/">全部</a>
-                <a class="" href="/course/0/{{ referer_url2 }}">免费</a>
-                <a class="" href="/course/1/{{ referer_url2 }}">限免</a>
-                <div class="course-cates-vip ">
-                    <a target="_blank" href="/course/2/"><img src="/static/img/vip-icon.png"></a>
-                    <a class="" href="/course/2/{{ referer_url2 }}">会员</a>
-                </div>
-            </div>
-        </div>
-        <div class="row course-cates">
-            <div class="col-md-1 course-cates-title">标签：</div>
-            <div class="col-md-11 course-cates-content">
-                <a class="active" href="/courses/?course_type=all&amp;fee=all">全部</a>
-                {% for label in label_list %}
-                    <a class="" href="{{ referer_url1 + label.l_name }}/">{{ label.l_name }}</a>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-    <div class="content position-relative">
+
+    <div class="content position-relative" id="vue_data">
         <ul class="nav nav-tabs" role="tablist">
             <li class="active"><a href="/courses/?course_type=all&amp;tag=all&amp;fee=all">已上线</a></li>
             <li class=""><a href="/courses/?status=preview" class="stat-event" data-stat="preview_course">即将上线</a></li>
@@ -48,8 +26,8 @@
 
 
 
-        {% for course in course_list %}
-        <div class="col-md-4 col-sm-6  course">
+
+        <div class="col-md-4 col-sm-6  course" v-for="pdd in page_data">
             <a class="course-box" href="show.html">
                 <div class="sign-box">
 
@@ -58,20 +36,20 @@
                         data-unfollow-url="/courses/63/unfollow"  style="display:none"  ></i>
                 </div>
                 <div class="course-img">
-                    <img alt="{{ course.c_name }}" src="{{ course.picture }}">
+                    <img v-bind:src="pdd.picture" v-bind:alt="pdd.c_name">
                 </div>
 
                 <div class="course-body">
-                    <span class="course-title" data-toggle="tooltip" data-placement="bottom" title="{{ course.c_name }}">{{ course.c_name }}</span>
+                    <span class="course-title" data-toggle="tooltip" data-placement="bottom" title="{[ pdd.c_name ]}">{[ pdd.c_name ]}</span>
                 </div>
                 <div class="course-footer">
 			        <span class="course-per-num pull-left">
-                        <i class="fa fa-users"></i>{{ course.show_number }}
+                        <i class="fa fa-users"></i>{[ pdd.show_number ]}
 			        </span>
                 </div>
             </a>
         </div>
-        {% endfor %}
+
 
 
 
@@ -292,7 +270,116 @@
 	</div>
     
 
-
+    <div class="modal fade" id="sign-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <button type="button" class="close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#signin-form" aria-controls="signin-form" role="tab" data-toggle="tab">登录</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#signup-form" aria-controls="signup-form" role="tab" data-toggle="tab">注册</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="signin-form">
+                        <form action="/login" method="post">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-envelope" style="margin:0;"></i>
+                                    </div>
+                                    <input type="email" name="login" class="form-control" placeholder="请输入邮箱">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-lock" style="margin:0;"></i>
+                                    </div>
+                                    <input type="password" name="password" class="form-control" placeholder="请输入密码">
+                                </div>
+                            </div>
+                            <div class="form-inline verify-code-item" style="display:none;">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" name="captcha_v" class="form-control" placeholder="请输入验证码">
+                                    </div>
+                                </div>
+                                <img class="verify-code" src="" source="https://www.shiyanlou.com/captcha.gif">
+                            </div>
+                            <div class="form-group remember-login">
+                                <input name="remember" type="checkbox" value="y"> 下次自动登录
+                                <a class="pull-right" href="/static/reset_password/index.html">忘记密码？</a>
+                            </div>
+                            <div class="form-group">
+                                <input class="btn btn-primary" name="submit" type="submit" value="进入实验楼">
+                            </div>
+                            <div class="form-group widget-signin">
+                                <span>快速登录</span>
+                                <a href="/auth/qq?next="><i class="fa fa-qq"></i></a>
+                                <a href="/auth/weibo?next="><i class="fa fa-weibo"></i></a>
+                                <a href="/auth/weixin?next="><i class="fa fa-weixin"></i></a>
+                                <a href="/auth/github?next="><i class="fa fa-github"></i></a>
+                                <a href="/auth/renren?next="><i class="fa fa-renren"></i></a>
+                            </div>
+                            <div class="form-group error-msg">
+                                <div class="alert alert-danger" role="alert"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="signup-form">
+                        <form action="/register" method="post">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-envelope" style="margin:0;"></i>
+                                    </div>
+                                    <input type="email" name="email" class="form-control" placeholder="请输入邮箱">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-lock" style="margin:0;"></i>
+                                    </div>
+                                    <input type="password" name="password" class="form-control" placeholder="请输入密码">
+                                </div>
+                            </div>
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" name="captcha_v" class="form-control" placeholder="请输入验证码">
+                                    </div>
+                                </div>
+                                <img class="verify-code" src="" source="https://www.shiyanlou.com/captcha.gif">
+                            </div>
+                            <div class="form-group">
+                                <input class="btn btn-primary" name="submit" type="submit" value="注册">
+                            </div>
+                            <div class="form-group agree-privacy">
+                                注册表示您已经同意我们的<a href="/static/privacy/index.html" target="_blank">隐私条款</a>
+                            </div>
+                            <div class="form-group widget-signup">
+                                <span>快速注册</span>
+                                <a href="/auth/qq?next="><i class="fa fa-qq"></i></a>
+                                <a href="/auth/weibo?next="><i class="fa fa-weibo"></i></a>
+                                <a href="/auth/weixin?next="><i class="fa fa-weixin"></i></a>
+                                <a href="/auth/github?next="><i class="fa fa-github"></i></a>
+                                <a href="/auth/renren?next="><i class="fa fa-renren"></i></a>
+                            </div>
+                            <div class="form-group error-msg">
+                                <div class="alert alert-danger" role="alert"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
     <div id="base-data"
@@ -310,6 +397,39 @@
         data-msg-system=""
     ></div>
 
+    {% block script %}
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="/static/static/vue/vue.min.js"></script>
+        <script src="/static/static/vue/vue-resource.js"></script>
+        <script>
+            Vue.use(VueResource);
+            var vue = new Vue(
+                {
+                    delimiters: ["{[", "]}"],
+                    el: "#vue_data",
+                    data: {
+                        message: "hello vue",
+                        page_data: []
+                    },
+                    created: function () {
+                        this.$http.get("/CourseApi/page/page/1/").then(
+                            function (data) {
+                                this.page_data = data["data"]["data"];
+                                console.log(this.page_data)
+                            },
+                            function (error) {
+                                console.log(error)
+                            }
+                        )
+                    },
+                    methods:{
+
+                    }
+                }
+            )
+        </script>
+    {% endblock %}
+
     <script src="/static/app/dest/lib/lib.js?=2016121272249"></script>
     <script src="/static/static/jquery/2.2.4/jquery.min.js"></script>
     <script src="/static/static/ace/1.2.5/ace.js"></script>
@@ -325,6 +445,10 @@
     <script src="/static/static/bootstrap-table/1.11.0/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
 
     <script src="/static/static/ravenjs/3.7.0/raven.min.js"></script>
+
+
+
+
     <script>
         Raven.config('https://bc3878b7ed0a4468a65390bd79e6e73f@sentry.shiyanlou.com/5', {
             release: '3.12.13'

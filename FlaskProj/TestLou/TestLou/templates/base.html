@@ -134,10 +134,14 @@
 
 
             <div class="navbar-right btns">
-                <a class="btn btn-default navbar-btn sign-in" data-sign="signin" href="#sign-modal" data-toggle="modal">登录</a>
-                <a class="btn btn-default navbar-btn sign-up" data-sign="signup" href="#sign-modal" data-toggle="modal">注册</a>
+                {% if now_status == 0 %}
+                    <a class="btn btn-default navbar-btn sign-in" data-sign="signin" href="#sign-modal" data-toggle="modal">登录</a>
+                    <a class="btn btn-default navbar-btn sign-up" data-sign="signup" href="#sign-modal" data-toggle="modal">注册</a>
+
+                {% else %}
+                    <a class="btn btn-default navbar-btn sign-in" data-sign="signin" href="/logout/" data-toggle="modal">退出登陆</a>
+                {% endif %}
             </div>
-            
 
             <form class="navbar-form navbar-right" method="get" role="search">
                 <div class="form-group">
@@ -241,8 +245,181 @@
     </div>
 </div>
 
-            
-        
+<!--登陆注册弹框-->
+<div class="modal fade" id="sign-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <button type="button" class="close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#signin-form" aria-controls="signin-form" role="tab" data-toggle="tab">登录</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#signup-form" aria-controls="signup-form" role="tab" data-toggle="tab">注册</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="signin-form">
+                        <form action="/login/" method="post">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-envelope" style="margin:0;"></i>
+                                    </div>
+                                    <input id="valid_email" type="email" name="email" class="form-control" placeholder="请输入邮箱">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-lock" style="margin:0;"></i>
+                                    </div>
+                                    <input id="valid_password" type="password" name="password" class="form-control" placeholder="请输入密码">
+                                </div>
+                            </div>
+
+
+
+                                <div id="error_msg"></div>
+
+
+
+                            <div class="form-group remember-login">
+                                <input name="remember" type="checkbox" value="y"> 下次自动登录
+                                <a class="pull-right" href="reset_password/index.html">忘记密码？</a>
+                            </div>
+                            <div class="form-group">
+                                <input id="login_submit" class="btn btn-primary" name="submit" type="submit" value="进入实验楼">
+                            </div>
+                            <div class="form-group widget-signin">
+                                <span>快速登录</span>
+                                <a href="/auth/qq?next="><i class="fa fa-qq"></i></a>
+                                <a href="/auth/weibo?next="><i class="fa fa-weibo"></i></a>
+                                <a href="/auth/weixin?next="><i class="fa fa-weixin"></i></a>
+                                <a href="/auth/github?next="><i class="fa fa-github"></i></a>
+                                <a href="/auth/renren?next="><i class="fa fa-renren"></i></a>
+                            </div>
+                            <div class="form-group error-msg">
+                                <div class="alert alert-danger" role="alert"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="signup-form">
+                        <form action="/register/" method="post">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-envelope" style="margin:0;"></i>
+                                    </div>
+                                    <input type="name" name="name" class="form-control" placeholder="请输入昵称">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-envelope" style="margin:0;"></i>
+                                    </div>
+                                    <input id="register_email" type="email" name="email" class="form-control" placeholder="请输入邮箱">
+                                </div>
+                            </div>
+                            <div id="register_msg"></div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-lock" style="margin:0;"></i>
+                                    </div>
+                                    <input id="register_password" type="password" name="password" class="form-control" placeholder="请输入密码">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <input id="register_submit" class="btn btn-primary" name="submit" type="submit" value="注册">
+                            </div>
+                            <div class="form-group agree-privacy">
+                                注册表示您已经同意我们的<a href="privacy/index.html" target="_blank">隐私条款</a>
+                            </div>
+                            <div class="form-group widget-signup">
+                                <span>快速注册</span>
+                                <a href="/auth/qq?next="><i class="fa fa-qq"></i></a>
+                                <a href="/auth/weibo?next="><i class="fa fa-weibo"></i></a>
+                                <a href="/auth/weixin?next="><i class="fa fa-weixin"></i></a>
+                                <a href="/auth/github?next="><i class="fa fa-github"></i></a>
+                                <a href="/auth/renren?next="><i class="fa fa-renren"></i></a>
+                            </div>
+                            <div class="form-group error-msg">
+                                <div class="alert alert-danger" role="alert"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% block script %}
+{% endblock %}
+        <script src="/static/static/jquery/2.2.4/jquery.min.js"></script>
+        <script>
+            $("#valid_password").blur(
+                function () {
+                    var email = $("#valid_email").val();
+                    var password = $(this).val();
+                    var Data = {
+                        "email": email,
+                        "password": password
+                    };
+                    $.ajax(
+                        {
+                            "url": "/login_ajax/",
+                            "type": "post",
+                            "data": Data,
+                            success: function (data) {
+                                if (!data["is_user"]){
+                                    $("#error_msg").html(
+                                        "<p style='color:red'>密码输入错误</p>",
+                                    );
+                                    $("#login_submit").hide();
+                                }else{
+                                    $("#error_msg").empty();
+                                    $("#login_submit").show();
+                                }
+                            },
+                            error: function (error) {
+                                console.log(error)
+                            }
+                        }
+                    )
+                }
+            );
+            $("#register_email").blur(
+              function () {
+                  var email = $(this).val();
+                  var url = "/register_ajax/?email="+email;
+                  $.ajax(
+                      {
+                          "url": url,
+                          "type": "get",
+                          "data": "",
+                          success: function (data) {
+                              if (data["is_exist"]) {
+                                  $("#register_msg").html(
+                                      "<p style='color:red'>邮箱已被注册</p>"
+                                  );
+                                  $("#register_submit, #register_password").hide();
+                              } else {
+                                  $("#register_msg").empty();
+                                  $("#register_submit, #register_password").show();
+                              }
+                          },
+                          error: function (error) {
+                              console.log(error)
+                          }
+                      }
+                  )
+              }
+            )
+        </script>
 	
 </body>
 </html>
