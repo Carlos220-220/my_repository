@@ -235,6 +235,11 @@ class CourseApi(Resource):
         return self.result
 
 
+@app.route("/ajax_vue/")
+def course_page():
+    return render_template("ajax+vue.html", **locals())
+
+
 @app.route('/get_test/')
 def get_test():
     req = int(request.args.get("page", 1))
@@ -284,9 +289,7 @@ api.add_resource(
 )
 
 
-@app.route("/ajax_vue/")
-def course_page():
-    return render_template("ajax+vue.html", **locals())
+
 
 
 @app.route("/login_ajax/", methods=["get", "post"])
@@ -311,3 +314,4 @@ def register_ajax():
     if not user:
         result["is_exist"] = False
     return result
+

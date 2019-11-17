@@ -32,7 +32,7 @@
             </div>
         </div>
     </div>
-    <div class="content position-relative">
+    <div class="content position-relative" id="vue_data">
         <ul class="nav nav-tabs" role="tablist">
             <li class="active"><a href="/courses/?course_type=all&amp;tag=all&amp;fee=all">已上线</a></li>
             <li class=""><a href="/courses/?status=preview" class="stat-event" data-stat="preview_course">即将上线</a></li>
@@ -58,7 +58,7 @@
                         data-unfollow-url="/courses/63/unfollow"  style="display:none"  ></i>
                 </div>
                 <div class="course-img">
-                    <img alt="{{ course.c_name }}" src="{{ course.picture }}">
+                    <img src="{{ course.picture }}" alt="{{ course.c_name }}">
                 </div>
 
                 <div class="course-body">
@@ -89,55 +89,11 @@
                 <span aria-hidden="true">上一页</span>
             </a>
         </li>
-        
-        
+
         
         <li class="active">
             <a href="/courses/?course_type=all&amp;tag=all&amp;fee=all&amp;page=1">1</a>
         </li>
-        
-        
-        
-        <li class="">
-            <a href="/courses/?course_type=all&amp;tag=all&amp;fee=all&amp;page=2">2</a>
-        </li>
-        
-        
-        
-        <li class="">
-            <a href="/courses/?course_type=all&amp;tag=all&amp;fee=all&amp;page=3">3</a>
-        </li>
-        
-        
-        
-        <li class="">
-            <a href="/courses/?course_type=all&amp;tag=all&amp;fee=all&amp;page=4">4</a>
-        </li>
-        
-        
-        
-        <li class="">
-            <a href="/courses/?course_type=all&amp;tag=all&amp;fee=all&amp;page=5">5</a>
-        </li>
-        
-        
-        
-        <li>
-            <a href='#'>.</a>
-        </li>
-        
-        
-        
-        <li class="">
-            <a href="/courses/?course_type=all&amp;tag=all&amp;fee=all&amp;page=24">24</a>
-        </li>
-        
-        
-        
-        <li class="">
-            <a href="/courses/?course_type=all&amp;tag=all&amp;fee=all&amp;page=25">25</a>
-        </li>
-        
         
         
         <li class="">
@@ -291,9 +247,6 @@
 		</div>
 	</div>
     
-
-
-
 
     <div id="base-data"
         
