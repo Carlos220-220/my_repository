@@ -10,6 +10,33 @@ from flask import redirect
 from TestLou.models import db
 from TestLou import api
 from flask_restful import Resource
+import functools
+
+
+ #  登录验证
+def loginValid(fun):
+    @functools.wraps(fun)
+    def inner(*args, **kwargs):
+        user_email = request.cookies.get("email")
+        if user_email:
+            return fun(*args, **kwargs)
+        else:
+            return redirect("/index/")
+    return inner
+
+
+def cookie_valid(status):
+    get_cookie = request.cookies.get("email")
+    if get_cookie:
+        status = 1  # 检验是否含有cookie,含有就返回1,没有则是0
+    return status
+
+
+def set_password(password):
+    md5 = hashlib.md5()
+    md5.update(password.encode())
+    result = md5.hexdigest()
+    return result
 
 
 @app.route("/register/", methods=["get", "post"])
@@ -52,18 +79,7 @@ def logout():
     return response
 
 
-def cookie_valid(status):
-    get_cookie = request.cookies.get("email")
-    if get_cookie:
-        status = 1  # 检验是否含有cookie,含有就返回1,没有则是0
-    return status
 
-
-def set_password(password):
-    md5 = hashlib.md5()
-    md5.update(password.encode())
-    result = md5.hexdigest()
-    return result
 
 
 @app.route('/', methods=["get", "post"])
