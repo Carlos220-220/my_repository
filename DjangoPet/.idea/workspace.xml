@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99feb6d1-e37f-489a-9369-9e011f707bce" name="Default Changelist" comment="vue+ajax分页查询模糊查询">
-      <change afterPath="$PROJECT_DIR$/DjangoPet/middleware.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PShop/static/pshop/js/echarts.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/error.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pshop/js/echarts.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Buyer/templates/buyer/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/templates/buyer/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Buyer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Buyer/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoPet/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoPet/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PShop/templates/pshop/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/PShop/templates/pshop/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PShop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PShop/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PShop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PShop/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoRestaurant/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoRestaurant/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DjangoTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DjangoTest/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +80,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DjangoRestaurant" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -221,6 +213,13 @@
       <workItem from="1573173223868" duration="16898000" />
       <workItem from="1573436884903" duration="116000" />
       <workItem from="1573453329828" duration="559000" />
+      <workItem from="1574082270116" duration="4592000" />
+      <workItem from="1574161819955" duration="4531000" />
+      <workItem from="1574237796095" duration="5793000" />
+      <workItem from="1574295885174" duration="2594000" />
+      <workItem from="1574340579218" duration="94000" />
+      <workItem from="1574340854031" duration="615000" />
+      <workItem from="1574383748722" duration="731000" />
     </task>
     <task id="LOCAL-00001" summary="vue+ajax分页查询模糊查询">
       <created>1572421211782</created>
